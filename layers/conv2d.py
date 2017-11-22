@@ -1,7 +1,7 @@
 import tensorflow as tf
 
-from utils import device_or_none, get_conv2d_kernel_size
-from initializers.xavier import xavier_initializer_conv2d, xavier_constant_conv2d
+from castanea2.utils import device_or_none, get_conv2d_kernel_size
+from castanea2.initializers.xavier import xavier_initializer_conv2d, xavier_constant_conv2d
 
 def conv2d(
         x, kernel_size, out_channels, 
@@ -89,4 +89,5 @@ def equalized_conv2d(
             y = activation(y)
 
         return y
+
 

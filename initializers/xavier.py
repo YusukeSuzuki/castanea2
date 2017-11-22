@@ -1,5 +1,5 @@
 import tensorflow as tf
-from utils import get_conv2d_kernel_size
+from castanea2.utils import get_conv2d_kernel_size
 
 def _initializer_constant(size, uniform=False):
     s = 6. if uniform else 2.

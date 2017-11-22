@@ -1,6 +1,6 @@
 import unittest
 import tensorflow as tf
-import layers
+import castanea2.layers as layers
 
 class TestLayers(unittest.TestCase):
     def test_conv2d(self):
