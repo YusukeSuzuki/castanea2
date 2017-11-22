@@ -12,7 +12,6 @@ def conv2d(
         bias_initializer=tf.zeros_initializer,
         activation=None,
         variable_device=None,
-        reuse=False,
         name=None,
         **kwargs
         ):
@@ -21,7 +20,7 @@ def conv2d(
 
     ks = get_conv2d_kernel_size(kernel_size)
     
-    with tf.variable_scope(None, default_name=scope_name, reuse=reuse):
+    with tf.variable_scope(None, default_name=scope_name):
         xs = x.get_shape().as_list()
 
         with device_or_none(variable_device):
@@ -56,7 +55,6 @@ def equalized_conv2d(
         bias_initializer=tf.zeros_initializer,
         activation=None,
         variable_device=None,
-        reuse=False,
         name=None,
         **kwargs
         ):
@@ -65,7 +63,7 @@ def equalized_conv2d(
 
     ks = get_conv2d_kernel_size(kernel_size)
     
-    with tf.variable_scope(None, default_name=scope_name, reuse=reuse):
+    with tf.variable_scope(None, default_name=scope_name):
         xs = x.get_shape().as_list()
 
         with device_or_none(variable_device):
