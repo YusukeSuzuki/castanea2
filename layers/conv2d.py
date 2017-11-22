@@ -39,7 +39,7 @@ def conv2d(
                 bias = tf.get_variable(
                     shape=[out_channels], initializer=bias_initializer(), name='bias')
 
-            y = tf.nn.bias_add(out, bias)
+            y = tf.nn.bias_add(y, bias)
 
 
         if activation:
@@ -83,7 +83,7 @@ def equalized_conv2d(
                 bias = tf.get_variable(
                     shape=[out_channels], initializer=bias_initializer(), name='bias')
 
-            y = tf.nn.bias_add(out, bias)
+            y = tf.nn.bias_add(y, bias)
 
         if activation:
             y = activation(y)
