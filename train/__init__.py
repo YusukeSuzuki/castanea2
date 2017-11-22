@@ -12,7 +12,7 @@ def average_gradients(tower_grads):
                 expanded_g = tf.expand_dims(g,0)
                 grads.append(expanded_g)
                 tf.summary.histogram(u.name, g,
-                    collections=[GraphKeys.SUMMARIES, 'histogram', 'average_gradients'])
+                    collections=[tf.GraphKeys.SUMMARIES, 'histogram', 'average_gradients'])
 
             grad = tf.concat(axis=0,values=grads)
             grad = tf.reduce_mean(grad,0)
