@@ -70,7 +70,7 @@ def equalized_conv2d(
 
         with device_or_none(variable_device):
             weight = tf.get_variable(
-                shape=[ks[0], ks[1], x_shape[3], out_channels],
+                shape=[ks[0], ks[1], xs[3], out_channels],
                 initializer=tf.truncated_normal_initializer(),
                 name='weight')
 
